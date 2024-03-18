@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+      <UserSecretsId>d37fc7f2-7b9a-4c40-9fe2-eda04a432db6</UserSecretsId>
+  </PropertyGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Messages.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Messages.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Messages.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+      <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.21.0" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.21.0" />
+    </ItemGroup>
+
+</Project>
